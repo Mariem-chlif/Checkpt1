@@ -1,0 +1,36 @@
+ALGORITHM CHECKPOINT
+VAR
+    n: INTEGER,
+    i:INTEGER:=0 ,
+    sentence : STRING,
+    num : INTEGER :=0 ,
+    esp : INTEGER:=0 ,
+    Vcount : INTEGER:=0 ;
+BEGIN
+
+
+BEGIN
+write (" enter your sentence :" )
+n:=length(sentence)
+   
+FOR i FROM 0 TO  n -1  DO
+IF sentence[i]<>' ' and sentence[i]<>'.' THEN
+   num := num +1; 
+END_IF 
+
+
+IF (sentence[j] := ' ') THEN
+    esp =esp+1;
+END_IF  
+
+    sentence[i]←char( ord(sentence[i])+32  )
+
+IF (sentence[k] = ("A","E","I","O","U") )THEN
+   Vcount := Vcount+1 ;
+END_IF
+END_FOR
+
+RETURN  (" The length of the sentence : " num , "The number of words in the sentence  :"  esp , " The number of vowels in the sentence :" Vcount );
+
+END
+
